@@ -5,7 +5,6 @@ def parse(query: str) -> dict:
     dict = {}
     key, znach = re.findall(r'(\w+)=', query), re.findall(r'=(\w+)', query)
     for item1, item2 in zip(key, znach): dict.update({item1: item2})
-    print(dict)
     return dict
 
 
